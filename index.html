@@ -1,65 +1,199 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Bryan Website</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
 <style>
-body {font-family: "Raleway", Arial, sans-serif}
-.w3-row img{margin-bottom:-8px}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Noteworthy", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    opacity: 0.7;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('http://localhost:8888/textures/BryanImages/board.png');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("http://localhost:8888/textures/BryanImages/IMG_0548.JPG");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("http://localhost:8888/textures/BryanImages/IMG_0551.JPG");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+#googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
 </style>
-<body>
+<body   bgcolor="#1c1b1b">
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
 
-  <!-- Header -->
-  <header class="w3-container w3-xlarge w3-padding-24">
-    <a href="#" class="w3-left w3-btn w3-white">MY ART</a>
-    <a href="#about" class="w3-right w3-btn w3-white">About</a>
-  </header>
+<center><a href= "http://www.w3schools.com/html/html_links.asp"> <input type="image" src="http://localhost:8888/textures/BryanImages/BrushIcon.png" style="align: Right; height: 60px; width: 60px" name="saveForm" class="btTxt submit" id="saveForm" /></a></center>
+<center><a href= "#Work"><input type="image" src="http://localhost:8888/textures/BryanImages/CanvasIcon.png" Style= "height: 60px; width: 60px" name="saveForm" class="btTxt submit" id="saveForm" /></center></a>
+<center><a href= "#Contact"><input type="image" src="http://localhost:8888/textures/BryanImages/ContactIcon.png" Style= "height: 60px; width: 60px" name="saveForm" class="btTxt submit" id="saveForm" /></center><a/>
 
-  <!-- Photo Grid -->
+<!-- Navbar (sit on top) -->
+
+
+<!-- First Parallax Image with Logo Text -->
+
+<div class="bgimg-1 w3-opacity w3-display-container">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">Team <span class="w3-hide-small">Peter</span> Parker</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p class="w3-center"><em></em></p>
+  <p>My name is Bryan A. Santiago I am a current University of Connecticut student going into my third year of college in the Digital Medial and Design. I curently work at Scout Adventure on 34 atlantic in Stamford C.T. which is a footware streetware store very well known in stamford.
+   </p>
   <div class="w3-row">
-    <div class="w3-half">
-      <img src="/w3images/streetart.jpg" style="width:100%">
-      <img src="/w3images/streetart2.jpg" style="width:100%">
-      <img src="/w3images/streetart5.jpg" style="width:100%">
+    <div class="w3-col m6 w3-center w3-section">
+      <p><b>Bryan A. Santiago</b></p><br>
+      <img src="http://localhost:8888/textures/BryanImages/BrushIcon.png" height="200px" width= "200px" class="w3-square" alt="Photo of Me">
     </div>
 
-    <div class="w3-half">
-      <img src="/w3images/streetart3.jpg" style="width:100%">
-      <img src="/w3images/streetart4.jpg" style="width:100%">
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-section">
+      <p>Welcome to my website about a student trying to make interesting content and share how I see the world.</p>
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <a name= "Work"><h3 class="w3-center">MY WORK</h3></a>
+  <p class="w3-center"><em>Some of My Latest Projects<br> Click on the images to make them bigger</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="http://localhost:8888/textures/BryanImages/IMG_0685.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://localhost:8888/textures/BryanImages/IMG_1355.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://localhost:8888/textures/BryanImages/IMG_0643.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://localhost:8888/textures/BryanImages/stephen.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
     </div>
   </div>
 
-<!-- End Page Content -->
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="http://localhost:8888/textures/BryanImages/guz.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://localhost:8888/textures/BryanImages/BryanCove.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://localhost:8888/textures/BryanImages/jon.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="http://localhost:8888/textures/BryanImages/nature.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+</div>
+<iframe width="auto" height="auto" src="https://www.youtube.com/embed/kpkKPNb9h9M?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="auto" height="auto" src="https://www.youtube.com/embed/VwJep5fLl1Q?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="auto" height="auto" src="https://www.youtube.com/embed/OiJClDkmpYg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-text-white w3-xxxlarge w3-container w3-display-topright">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" style="max-width:100%">
+  </div>
 </div>
 
-<!-- Footer / About Section -->
-<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
-  <h2>About</h2>
-  <img src="/w3images/boy.jpg" class="w3-image w3-padding-32" width="300" height="300">
-  <form style="margin:auto;width:60%" action="form.asp" target="_blank">
-    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-    <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
-    <div class="w3-group">
-      <label><b>Name</b></label>
-      <input class="w3-input w3-border" type="text" required name="Name">
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container">
+  <div class="w3-display-middle">
+     <span Style= "color: red;" class=w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 style= "color:blue;" class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>Share with me</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+
+    <div class="w3-col m8 w3-container w3-section">
+      <div class="w3-large w3-margin-bottom">
+        <a name= "Contact"><i Style= "color:yellow;"class="fa fa-map-marker w3-hover-text-black" style="width:30px"></i> Stamford, C.T. US<br></a>
+        <i Style= "color:green;"class="fa fa-phone w3-hover-text-black" style="width:30px"></i> Phone:<br>
+        <i Style= "color:red;" class="fa fa-envelope w3-hover-text-black" style="width:30px"> </i> Email: p14bsantiago@gmail.com<br>
+      </div>
+      <p>Contact on Instagram @bryananthonypr or leave me a note:</p>
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+          <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Name">
+        </div>
+        <div class="w3-half">
+          <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Email">
+        </div>
+      </div>
+      <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Comment">
+      <button class="w3-btn w3-section w3-right">SEND</button>
     </div>
-    <div class="w3-group">
-      <label><b>Email</b></label>
-      <input class="w3-input w3-border" type="text" required name="Email">
-    </div>
-    <div class="w3-group">
-      <label><b>Message</b></label>
-      <input class="w3-input w3-border" required name="Message">
-    </div>
-    <button type="submit" class="w3-btn w3-btn-block w3-padding-12 w3-dark-grey">Send</button>
-  </form>
-  <br>
-  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+  </div>
+</div>
+
+</script>
 
 </body>
 </html>
